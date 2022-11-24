@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex10.go                                            :+:      :+:    :+:   */
+/*   ex7.go                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 14:31:02 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/11/13 14:50:50 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/11/14 13:56:13 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/11/14 15:22:08 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println(true && true)
-	fmt.Println(true && false)
-	fmt.Println(true || true)
-	fmt.Println(true || false)
-	fmt.Println(!true)
-	fmt.Println(!false)
+	s1 := [][]string{{"James", "Bonds", "Shaken, not stirred"}, {"Miss", "Moneypenny", "Hello, not James"}}
+	for _, val := range s1 {
+		fmt.Println(val)
+		for _, rec := range val {
+			fmt.Println(rec)
+		}
+	}
+	smap := map[string]string{
+		"Bonds":"Shaken, not stirred",
+		"Moneypenny"
+	}
 }

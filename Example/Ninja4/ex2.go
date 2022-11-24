@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex10.go                                            :+:      :+:    :+:   */
+/*   ex2.go                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 14:31:02 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/11/13 14:50:50 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/11/14 12:20:32 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/11/14 12:25:50 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func main() {
-	fmt.Println(true && true)
-	fmt.Println(true && false)
-	fmt.Println(true || true)
-	fmt.Println(true || false)
-	fmt.Println(!true)
-	fmt.Println(!false)
+	sl := make([]int, 10)
+	for i := 0; i < 10; i++ {
+		sl[i] = rand.Intn(100)
+	}
+	for _, val := range sl {
+		fmt.Println(val)
+	}
+	fmt.Printf("sl Type is %T\n", sl)
 }

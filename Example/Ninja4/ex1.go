@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex10.go                                            :+:      :+:    :+:   */
+/*   ex1.go                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 14:31:02 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/11/13 14:50:50 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/11/14 12:06:20 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/11/14 12:11:03 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println(true && true)
-	fmt.Println(true && false)
-	fmt.Println(true || true)
-	fmt.Println(true || false)
-	fmt.Println(!true)
-	fmt.Println(!false)
+	var Ar [5]int
+	for i := 0; i < 5; i++ {
+		Ar[i] = i + 5
+	}
+	for _, val := range Ar {
+		fmt.Println(val)
+	}
+	fmt.Printf("Type : %T\n", Ar)
 }

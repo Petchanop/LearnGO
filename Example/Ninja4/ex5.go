@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex10.go                                            :+:      :+:    :+:   */
+/*   ex5.go                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 14:31:02 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/11/13 14:50:50 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/11/14 13:31:23 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/11/14 13:34:17 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println(true && true)
-	fmt.Println(true && false)
-	fmt.Println(true || true)
-	fmt.Println(true || false)
-	fmt.Println(!true)
-	fmt.Println(!false)
+	sl := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
+	sl = append(sl[:3], sl[6:]...)
+	fmt.Println(sl)
 }
