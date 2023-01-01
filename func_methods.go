@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_ex.go                                          :+:      :+:    :+:   */
+/*   func_methods.go                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 19:30:11 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/11/24 23:15:10 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/12/29 15:26:06 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/12/29 15:31:35 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
+type person struct {
+	firstname string
+	lastname  string
+}
+
+type secretAgents struct {
+	person
+	ltk bool
+}
+
+func (agents secretAgents) speak() {
+	fmt.Println("I am", agents.firstname, agents.lastname)
+}
 
 func main() {
-	m := map[string]int{
-		"Mobile": 1,
-		"Mhew":   2,
-		"Moss":   3,
+	Agent_1 := secretAgents{
+		person: person{
+			"Petch",
+			"Noppadon",
+		},
+		ltk: true,
 	}
-	// fmt.Println(m)
-	// fmt.Println(m["Mobile"])
-
-	//read key and value from map
-	// v, ok := m["Mhew"]
-	// fmt.Println(v)
-	// fmt.Println(ok)
-
-	//addd elements to map
-	m["May"] = 4
-	for value, _ := range m {
-		fmt.Println(value)
-	}
-	//delete member in map
-	delete(m, "Mobile")
-	fmt.Println(m)
+	fmt.Println(Agent_1)
+	Agent_1.speak()
 }

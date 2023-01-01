@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_ex.go                                          :+:      :+:    :+:   */
+/*   defer.go                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 19:30:11 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/11/24 23:15:10 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/12/29 15:20:25 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/12/29 15:24:33 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,14 @@ import (
 )
 
 func main() {
-	m := map[string]int{
-		"Mobile": 1,
-		"Mhew":   2,
-		"Moss":   3,
-	}
-	// fmt.Println(m)
-	// fmt.Println(m["Mobile"])
+	defer Ex_defer()
+	Ex_defer2()
+}
 
-	//read key and value from map
-	// v, ok := m["Mhew"]
-	// fmt.Println(v)
-	// fmt.Println(ok)
+func Ex_defer() {
+	fmt.Println("test")
+}
 
-	//addd elements to map
-	m["May"] = 4
-	for value, _ := range m {
-		fmt.Println(value)
-	}
-	//delete member in map
-	delete(m, "Mobile")
-	fmt.Println(m)
+func Ex_defer2() {
+	fmt.Println("defer")
 }

@@ -1,41 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_ex.go                                          :+:      :+:    :+:   */
+/*   callback.go                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 19:30:11 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/11/24 23:15:10 by npiya-is         ###   ########.fr       */
+/*   Created: 2023/01/01 17:22:55 by npiya-is          #+#    #+#             */
+/*   Updated: 2023/01/01 17:24:30 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 package main
 
-import (
-	"fmt"
-)
-
+/*- passing func as a argument
+  - functional programming concept*/
 func main() {
-	m := map[string]int{
-		"Mobile": 1,
-		"Mhew":   2,
-		"Moss":   3,
-	}
-	// fmt.Println(m)
-	// fmt.Println(m["Mobile"])
 
-	//read key and value from map
-	// v, ok := m["Mhew"]
-	// fmt.Println(v)
-	// fmt.Println(ok)
-
-	//addd elements to map
-	m["May"] = 4
-	for value, _ := range m {
-		fmt.Println(value)
-	}
-	//delete member in map
-	delete(m, "Mobile")
-	fmt.Println(m)
 }

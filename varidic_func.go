@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_ex.go                                          :+:      :+:    :+:   */
+/*   varidic_func.go                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npiya-is <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 19:30:11 by npiya-is          #+#    #+#             */
-/*   Updated: 2022/11/24 23:15:10 by npiya-is         ###   ########.fr       */
+/*   Created: 2022/12/29 14:13:06 by npiya-is          #+#    #+#             */
+/*   Updated: 2022/12/29 14:37:03 by npiya-is         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,29 @@ import (
 )
 
 func main() {
-	m := map[string]int{
-		"Mobile": 1,
-		"Mhew":   2,
-		"Moss":   3,
-	}
-	// fmt.Println(m)
-	// fmt.Println(m["Mobile"])
+	VaridicSum(2, 3, 4, 5, 6, 7)
+	ex := []int{2, 3, 4, 5, 6, 7}
+	ret := SumSlices(ex...)
+	fmt.Println(ret)
+}
 
-	//read key and value from map
-	// v, ok := m["Mhew"]
-	// fmt.Println(v)
-	// fmt.Println(ok)
+func VaridicSum(x ...int) {
+	fmt.Println(x)
+	fmt.Printf("%T\n", x)
 
-	//addd elements to map
-	m["May"] = 4
-	for value, _ := range m {
-		fmt.Println(value)
+	sum := 0
+	for _, v := range x {
+		sum += v
+		fmt.Printf("%d", v)
 	}
-	//delete member in map
-	delete(m, "Mobile")
-	fmt.Println(m)
+	fmt.Println()
+	fmt.Println(sum)
+}
+
+func SumSlices(num ...int) int {
+	sum := 0
+	for _, value := range num {
+		sum += value
+	}
+	return (sum)
 }
